@@ -28,6 +28,7 @@ ADD ./wfmodules/ /wildfly/modules/
 # Configure Source-To-Image scripts
 ADD ./bin /usr/bin/
 RUN chmod a+rx /usr/bin/usage
+ENV STI_SCRIPTS_URL https://raw.githubusercontent.com/bparees/docker-image-examples/remote_scripts/centos-wildfly-noscript/sti_scripts
 
 # Add geard/sti wildfly customizations
 ADD ./wfbin/standalone.conf /wildfly/bin/standalone.conf
